@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class HealthCheckersConfig(AppConfig):
-    name = 'health_checkers'
+    name = 'django_health_check'

@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from health_check.views import MainView
 
-from health_checkers.views import RabbitMQHealthCheckView, DBHealthCheckView, CeleryHealthCheckView
+from django_health_check.views import RabbitMQHealthCheckView, DBHealthCheckView, CeleryHealthCheckView
 
 urlpatterns = [
     url(r'rabbitmq', RabbitMQHealthCheckView.as_view(), name='rabbitmq_health_check'),

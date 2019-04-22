@@ -15,12 +15,12 @@ Quick start
         'health_check.db',
         'health_check.contrib.celery',
         'health_check.contrib.rabbitmq',        
-        'django-healthcheck',
+        'django_health_check',
     ]
 
 2. Include this line in your project urls.py like this::
 
-    path('django-healthcheck/', include('django-healthcheck.urls')),
+    path('django-healthcheck/', include('django_health_check.urls')),
 
 3. Make sure this vars is set in settings.py:
    

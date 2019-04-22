@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from health_check.views import MainView
 
-from health_checkers.helpers import check_service
+from django_health_check.helpers import check_service
 
 
 class RabbitMQHealthCheckView(MainView):

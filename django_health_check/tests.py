@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from health_checkers.helpers import check_service
+from django_health_check.helpers import check_service
 
 
 class Plugin:
