@@ -1,0 +1,45 @@
+=====
+Django Project Health Ckecks
+=====
+
+Checks django project services states: database, celery, rabbitmq. Givs separate api endpoints for every service and common status page.
+
+Quick start
+-----------
+
+1. Add this strings to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'health_check',
+        'health_check.db',
+        'health_check.contrib.celery',
+        'health_check.contrib.rabbitmq',
+        'django-project-health-checks',
+    ]
+
+2. Include this line in your project urls.py like this::
+
+    path('dp-health-checks/', include('django-project-health-checks.urls')),
+
+3. Make sure this vars is set in setting.py:
+   BROKER_URL
+   CELERY_RESULT_BACKEND = "amqp"
+
+3. Visit http://127.0.0.1:8000/dp-health-checks/all to check all checks is working or make requests
+
+----------
+
+200 - OK , 500 - UNAVAILABLE.
+### Database
+`curl -v -X GET -H "Accept: application/json" http://127.0.0.1:8000/dp-health-checks/db`
+
+### RabbitMQ
+`curl -v -X GET -H "Accept: application/json" http://127.0.0.1:8000/dp-health-checks/rabbitmq`
+
+### Celery
+`curl -v -X GET -H "Accept: application/json" http://127.0.0.1:8000/dp-health-checks/celery`
+
+### All
+`curl -v -X GET -H "Accept: application/json" http://127.0.0.1:8000/dp-health-checks/all` 
+
