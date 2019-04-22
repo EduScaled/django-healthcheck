@@ -20,7 +20,7 @@ Quick start
 
 2. Include this line in your project urls.py like this::
 
-    path('django-healthcheck/', include('django-project-health-checks.urls')),
+    path('django-healthcheck/', include('django-healthcheck.urls')),
 
 3. Make sure this vars is set in settings.py:
    
@@ -32,6 +32,7 @@ Quick start
 -----------
 
 200 - OK , 500 - UNAVAILABLE.
+
 ### Database
 `curl -v -X GET -H "Accept: application/json" http://127.0.0.1:8000/django-healthcheck/db`
 
