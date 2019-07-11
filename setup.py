@@ -8,7 +8,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-healthcheck',
-    version='1.0',
+    version='1.1',
     packages=find_packages(),
     test_suite='tests',
     install_requires=['django-health-check==3.9.0'],
