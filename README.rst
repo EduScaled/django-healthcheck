@@ -13,6 +13,7 @@ Quick start
         ...
         'health_check',
         'health_check.db',
+        'health_check.cache',
         'health_check.contrib.celery',
         'health_check.contrib.rabbitmq',        
         'django_health_check',
@@ -41,6 +42,9 @@ Quick start
 
 ### Celery
 `curl -v -X GET -H "Accept: application/json" http://127.0.0.1:8000/django-healthcheck/celery`
+
+### Cache
+`curl -v -X GET -H "Accept: application/json" http://127.0.0.1:8000/django-healthcheck/cache`
 
 ### All
 `curl -v -X GET -H "Accept: application/json" http://127.0.0.1:8000/django-healthcheck/all` 
